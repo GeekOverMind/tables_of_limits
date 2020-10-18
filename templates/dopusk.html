@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <h1>{{ title }}</h1>
+    <div class="tableContainer">
+        <div class="tableRow">
+            <section id="left">
+                test
+            </section>
+
+            <section id="main">
+
+                {% if title == 'Позиционный допуск' %}
+                    <p>Расчет проводить согласно ГОСТ 14140</p>
+
+                {% elif title in ['Допуск формы заданного профиля', 'Допуск формы заданной поверхности'] %}
+                    <p>Расчет проводить согласно другой нормативной документации</p>
+
+                {% else %}
+                    <div class="dopusk">
+                        {% if image %}
+                            <img id="img_dopusk" src="static/images/dopusk/{{ image }}"/>
+                        {% endif %}
+
+                        <form class="tableContainerForm" method='POST' action='/result'>
+                            <div class="tableRowForm">
+                                <p>Размер:</p>
+                                <p><input type="text" name="size" width="30" required></p>
+                            </div>
+
+                            <div class="tableRowForm">
+                                <p>Допуск:</p>
+                                <p><input type="text" name="it" width="30" required></p>
+                            </div>
+
+                            <div class="tableRowForm">
+                                <p>Степень точности:</p>
+                                <p>
+                                    <input type="radio" name="accuracy" value="1" required>Нормальная<br>
+                                    <input type="radio" name="accuracy" value="2">Повышенная<br>
+                                    <input type="radio" name="accuracy" value="3">Высокая<br>
+                                </p>
+                            </div>
+
+                            <div class="tableRowForm">
+                                <p></p>
+                                <p><input type="submit" class="toResult" value="рассчитать"></p>
+                            </div>
+                        </form>
+
+                        {% if size and it and dopusk and interval_razmerov and accuracy: %}
+                            Результаты:
+                        <div class="tableContainerForm">
+                            <div class="tableRowForm">
+                                <p>Интервал размеров:</p>
+                                <p>{{ interval_razmerov }} мм</p>
+                            </div>
+
+                            <div class="tableRowForm">
+                                <p>Значение допуска:</p>
+                                <p>{{ dopusk }}</p>
+                            </div>
+
+                            <div class="tableRowForm">
+                                <p>Степень точности:</p>
+                                <p>{{ accuracy }}</p>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            </section>
+
+            <section id="right">
+                test
+            </section>
+        </div>
+    </div>
+
+    <p>
+        <a href="{{ url_for('enter_page') }}">На главную</a>
+    </p>
+
+
+{% endblock %}

@@ -1,0 +1,117 @@
+body {
+    background: #e9eef1 linear-gradient(#e9eef1, #c5d3dc);
+    font-family: Arial, Verdana, sans-serif;
+    text-align: center;
+    margin: 0px;
+    /* background-color: #a5cad2;d1e4e8;cee1e7*e9eef1   url("images/main/background.jpg") no-repeat center center;
+    background: #e9eef1 linear-gradient(#e9eef1, #aad4ee);
+    a9c5d6*/
+}
+
+.tableContainer {
+    display: table;
+    width: 100%;
+    border-spacing: 10px;
+}
+
+.tableRow {
+    display: table-row;
+}
+
+section#left {
+    display: table-cell;
+    vertical-align: top;
+    width: 20%;
+    padding: 15px;
+}
+
+section#main {
+    display: table-cell;
+    vertical-align: top;
+    padding: 15px;
+    width: 60%;
+}
+
+section#right {
+    display: table-cell;
+    vertical-align: top;
+    padding: 15px;
+    width: 20%;
+}
+
+table {
+    /*background-color: #e9eef1;*/
+    border: solid black;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: thin solid black;
+    padding: 5px;
+}
+
+.dopusk {
+    /*background-color: #e9eef1;*/
+    width: 64%;
+    margin-left: 18%;
+    margin-rught: 18%;
+}
+
+.tableContainerForm {
+    display: table;
+    width: 100%;
+    border-spacing: 10px;
+    margin: 0px;
+}
+
+.tableRowForm {
+    display: table-row;
+}
+
+.tableRowForm p:first-child {
+    display: table-cell;
+    vertical-align: top;
+    text-align: right;
+    padding: 3px;
+    width: 50%;
+}
+
+.tableRowForm p {
+    display: table-cell;
+    vertical-align: top;
+    text-align: left;
+    padding: 3px;
+    width: 50%;
+}
+
+.toResult {
+    background: linear-gradient(white, grey);
+    border: none;
+    color: black;
+    width: 145px;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+header, h1, h2 {
+    padding-down: 10px;
+}
+
+footer {
+
+    padding-top: 10px;
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: red;
+  text-decoration: none;
+}
