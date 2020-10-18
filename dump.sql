@@ -1,0 +1,232 @@
+-- MySQL dump 10.13  Distrib 8.0.21, for Win64 (x86_64)
+--
+-- Host: localhost    Database: tables_of_limits
+-- ------------------------------------------------------
+-- Server version	8.0.21
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `table1`
+--
+
+DROP TABLE IF EXISTS `table1`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `table1` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `beg` int NOT NULL,
+  `en` int NOT NULL,
+  `accuracy1` decimal(6,2) NOT NULL,
+  `accuracy2` decimal(6,2) NOT NULL,
+  `accuracy3` decimal(6,2) NOT NULL,
+  `accuracy4` decimal(6,2) NOT NULL,
+  `accuracy5` decimal(6,2) NOT NULL,
+  `accuracy6` decimal(6,2) NOT NULL,
+  `accuracy7` decimal(6,2) NOT NULL,
+  `accuracy8` decimal(6,2) NOT NULL,
+  `accuracy9` decimal(6,2) NOT NULL,
+  `accuracy10` decimal(6,2) NOT NULL,
+  `accuracy11` decimal(6,2) NOT NULL,
+  `accuracy12` decimal(6,2) NOT NULL,
+  `accuracy13` decimal(6,2) NOT NULL,
+  `accuracy14` decimal(6,2) NOT NULL,
+  `accuracy15` decimal(6,2) NOT NULL,
+  `accuracy16` decimal(6,2) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `table1`
+--
+
+LOCK TABLES `table1` WRITE;
+/*!40000 ALTER TABLE `table1` DISABLE KEYS */;
+INSERT INTO `table1` VALUES (1,0,10,0.25,0.40,0.60,1.00,1.60,2.50,4.00,6.00,10.00,16.00,25.00,40.00,0.06,0.10,0.16,0.25),(2,10,16,0.30,0.50,0.80,1.20,2.00,3.00,5.00,8.00,12.00,20.00,30.00,50.00,0.08,0.12,0.20,0.30),(3,16,25,0.40,0.60,1.00,1.60,2.50,4.00,6.00,10.00,16.00,25.00,40.00,60.00,0.10,0.16,0.25,0.40),(4,25,40,0.50,0.80,1.20,2.00,3.00,5.00,8.00,12.00,20.00,30.00,50.00,80.00,0.12,0.20,0.30,0.50),(5,40,63,0.60,1.00,1.60,2.50,4.00,6.00,10.00,16.00,25.00,40.00,60.00,100.00,0.16,0.25,0.40,0.60),(6,63,100,0.80,1.20,2.00,3.00,5.00,8.00,12.00,20.00,30.00,50.00,80.00,120.00,0.20,0.30,0.50,0.80),(7,100,160,1.00,1.60,2.50,4.00,6.00,10.00,16.00,25.00,40.00,60.00,100.00,160.00,0.25,0.40,0.60,1.00),(8,160,250,1.20,2.00,3.00,5.00,8.00,12.00,20.00,30.00,50.00,80.00,120.00,200.00,0.30,0.50,0.80,1.20),(9,250,400,1.60,2.50,4.00,6.00,10.00,16.00,25.00,40.00,60.00,100.00,160.00,250.00,0.40,0.60,1.00,1.60),(10,400,630,2.00,3.00,5.00,8.00,12.00,20.00,30.00,50.00,80.00,120.00,200.00,300.00,0.50,0.80,1.20,2.00),(11,630,1000,2.50,4.00,6.00,10.00,16.00,25.00,40.00,60.00,100.00,160.00,250.00,400.00,0.60,1.00,1.60,2.50),(12,1000,1600,3.00,5.00,8.00,12.00,20.00,30.00,50.00,80.00,120.00,200.00,300.00,500.00,0.80,1.20,2.00,3.00),(13,1600,2500,4.00,6.00,10.00,16.00,25.00,40.00,60.00,100.00,160.00,250.00,400.00,600.00,1.00,1.60,2.50,4.00),(14,2500,4000,5.00,8.00,12.00,20.00,30.00,50.00,80.00,120.00,200.00,300.00,500.00,800.00,1.20,2.00,3.00,5.00),(15,4000,6300,6.00,10.00,16.00,25.00,40.00,60.00,100.00,160.00,250.00,400.00,600.00,1000.00,1.60,2.50,4.00,6.00),(16,6300,10000,8.00,12.00,20.00,30.00,50.00,80.00,120.00,200.00,300.00,500.00,800.00,1200.00,2.00,3.00,5.00,8.00);
+/*!40000 ALTER TABLE `table1` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `table2`
+--
+
+DROP TABLE IF EXISTS `table2`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `table2` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `beg` int NOT NULL,
+  `en` int NOT NULL,
+  `accuracy1` decimal(6,2) NOT NULL,
+  `accuracy2` decimal(6,2) NOT NULL,
+  `accuracy3` decimal(6,2) NOT NULL,
+  `accuracy4` decimal(6,2) NOT NULL,
+  `accuracy5` decimal(6,2) NOT NULL,
+  `accuracy6` decimal(6,2) NOT NULL,
+  `accuracy7` decimal(6,2) NOT NULL,
+  `accuracy8` decimal(6,2) NOT NULL,
+  `accuracy9` decimal(6,2) NOT NULL,
+  `accuracy10` decimal(6,2) NOT NULL,
+  `accuracy11` decimal(6,2) NOT NULL,
+  `accuracy12` decimal(6,2) NOT NULL,
+  `accuracy13` decimal(6,2) NOT NULL,
+  `accuracy14` decimal(6,2) NOT NULL,
+  `accuracy15` decimal(6,2) NOT NULL,
+  `accuracy16` decimal(6,2) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `table2`
+--
+
+LOCK TABLES `table2` WRITE;
+/*!40000 ALTER TABLE `table2` DISABLE KEYS */;
+INSERT INTO `table2` VALUES (1,0,3,0.30,0.50,0.80,1.20,2.00,3.00,5.00,8.00,12.00,20.00,30.00,50.00,0.08,0.12,0.20,0.30),(2,3,10,0.40,0.60,1.00,1.60,2.50,4.00,6.00,10.00,16.00,25.00,40.00,60.00,0.10,0.16,0.25,0.40),(3,10,18,0.50,0.80,1.20,2.00,3.00,5.00,8.00,12.00,20.00,30.00,50.00,80.00,0.12,0.20,0.30,0.50),(4,18,30,0.60,1.00,1.60,2.50,4.00,6.00,10.00,16.00,25.00,40.00,60.00,100.00,0.16,0.25,0.40,0.60),(5,30,50,0.80,1.20,2.00,3.00,5.00,8.00,12.00,20.00,30.00,50.00,80.00,120.00,0.20,0.30,0.50,0.80),(6,50,120,1.00,1.60,2.50,4.00,6.00,10.00,16.00,25.00,40.00,60.00,100.00,160.00,0.25,0.40,0.60,1.00),(7,120,250,1.20,2.00,3.00,5.00,8.00,12.00,20.00,30.00,50.00,80.00,120.00,200.00,0.30,0.50,0.80,1.20),(8,250,400,1.60,2.50,4.00,6.00,10.00,16.00,25.00,40.00,60.00,100.00,160.00,250.00,0.40,0.60,1.00,1.60),(9,400,630,2.00,3.00,5.00,8.00,12.00,20.00,30.00,50.00,80.00,120.00,200.00,300.00,0.50,0.80,1.20,2.00),(10,630,1000,2.50,4.00,6.00,10.00,16.00,25.00,40.00,60.00,100.00,160.00,250.00,400.00,0.60,1.00,1.60,2.50),(11,1000,1600,3.00,5.00,8.00,12.00,20.00,30.00,50.00,80.00,120.00,200.00,300.00,500.00,0.80,1.20,2.00,3.00),(12,1600,2500,4.00,6.00,10.00,16.00,25.00,40.00,60.00,100.00,160.00,250.00,400.00,600.00,1.00,1.60,2.50,4.00);
+/*!40000 ALTER TABLE `table2` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `table3`
+--
+
+DROP TABLE IF EXISTS `table3`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `table3` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `beg` int NOT NULL,
+  `en` int NOT NULL,
+  `accuracy1` decimal(6,2) NOT NULL,
+  `accuracy2` decimal(6,2) NOT NULL,
+  `accuracy3` decimal(6,2) NOT NULL,
+  `accuracy4` decimal(6,2) NOT NULL,
+  `accuracy5` decimal(6,2) NOT NULL,
+  `accuracy6` decimal(6,2) NOT NULL,
+  `accuracy7` decimal(6,2) NOT NULL,
+  `accuracy8` decimal(6,2) NOT NULL,
+  `accuracy9` decimal(6,2) NOT NULL,
+  `accuracy10` decimal(6,2) NOT NULL,
+  `accuracy11` decimal(6,2) NOT NULL,
+  `accuracy12` decimal(6,2) NOT NULL,
+  `accuracy13` decimal(6,2) NOT NULL,
+  `accuracy14` decimal(6,2) NOT NULL,
+  `accuracy15` decimal(6,2) NOT NULL,
+  `accuracy16` decimal(6,2) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `table3`
+--
+
+LOCK TABLES `table3` WRITE;
+/*!40000 ALTER TABLE `table3` DISABLE KEYS */;
+INSERT INTO `table3` VALUES (1,0,10,0.40,0.60,1.00,1.60,2.50,4.00,6.00,10.00,16.00,25.00,40.00,60.00,0.10,0.16,0.25,0.40),(2,10,16,0.50,0.80,1.20,2.00,3.00,5.00,8.00,12.00,20.00,30.00,50.00,80.00,0.12,0.20,0.30,0.50),(3,16,25,0.60,1.00,1.60,2.50,4.00,6.00,10.00,16.00,25.00,40.00,60.00,100.00,0.16,0.25,0.40,0.60),(4,25,40,0.80,1.20,2.00,3.00,5.00,8.00,12.00,20.00,30.00,50.00,80.00,120.00,0.20,0.30,0.50,0.80),(5,40,63,1.00,1.60,2.50,4.00,6.00,10.00,16.00,25.00,40.00,60.00,100.00,160.00,0.25,0.40,0.60,1.00),(6,63,100,1.20,2.00,3.00,5.00,8.00,12.00,20.00,30.00,50.00,80.00,120.00,200.00,0.30,0.50,0.80,1.20),(7,100,160,1.60,2.50,4.00,6.00,10.00,16.00,25.00,40.00,60.00,100.00,160.00,250.00,0.40,0.60,1.00,1.60),(8,160,250,2.00,3.00,5.00,8.00,12.00,20.00,30.00,50.00,80.00,120.00,200.00,300.00,0.50,0.80,1.20,2.00),(9,250,400,2.50,4.00,6.00,10.00,16.00,25.00,40.00,60.00,100.00,160.00,250.00,400.00,0.60,1.00,1.60,2.50),(10,400,630,3.00,5.00,8.00,12.00,20.00,30.00,50.00,80.00,120.00,200.00,300.00,500.00,0.80,1.20,2.00,3.00),(11,630,1000,4.00,6.00,10.00,16.00,25.00,40.00,60.00,100.00,160.00,250.00,400.00,600.00,1.00,1.60,2.50,4.00),(12,1000,1600,5.00,8.00,12.00,20.00,30.00,50.00,80.00,120.00,200.00,300.00,500.00,800.00,1.20,2.00,3.00,5.00),(13,1600,2500,6.00,10.00,16.00,25.00,40.00,60.00,100.00,160.00,250.00,400.00,600.00,1000.00,1.60,2.50,4.00,6.00),(14,2500,4000,8.00,12.00,20.00,30.00,50.00,80.00,120.00,200.00,300.00,500.00,800.00,1200.00,2.00,3.00,5.00,8.00),(15,4000,6300,10.00,16.00,25.00,40.00,60.00,100.00,160.00,250.00,400.00,600.00,1000.00,1600.00,2.50,4.00,6.00,10.00),(16,6300,10000,12.00,20.00,30.00,50.00,80.00,120.00,200.00,300.00,500.00,800.00,1200.00,2000.00,3.00,5.00,8.00,12.00);
+/*!40000 ALTER TABLE `table3` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `table4`
+--
+
+DROP TABLE IF EXISTS `table4`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `table4` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `beg` int NOT NULL,
+  `en` int NOT NULL,
+  `accuracy1` decimal(6,2) NOT NULL,
+  `accuracy2` decimal(6,2) NOT NULL,
+  `accuracy3` decimal(6,2) NOT NULL,
+  `accuracy4` decimal(6,2) NOT NULL,
+  `accuracy5` decimal(6,2) NOT NULL,
+  `accuracy6` decimal(6,2) NOT NULL,
+  `accuracy7` decimal(6,2) NOT NULL,
+  `accuracy8` decimal(6,2) NOT NULL,
+  `accuracy9` decimal(6,2) NOT NULL,
+  `accuracy10` decimal(6,2) NOT NULL,
+  `accuracy11` decimal(6,2) NOT NULL,
+  `accuracy12` decimal(6,2) NOT NULL,
+  `accuracy13` decimal(6,2) NOT NULL,
+  `accuracy14` decimal(6,2) NOT NULL,
+  `accuracy15` decimal(6,2) NOT NULL,
+  `accuracy16` decimal(6,2) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `table4`
+--
+
+LOCK TABLES `table4` WRITE;
+/*!40000 ALTER TABLE `table4` DISABLE KEYS */;
+INSERT INTO `table4` VALUES (1,0,3,0.80,1.20,2.00,3.00,5.00,8.00,12.00,20.00,30.00,50.00,80.00,120.00,0.20,0.30,0.50,0.80),(2,3,10,1.00,1.60,2.50,4.00,6.00,10.00,16.00,25.00,40.00,60.00,100.00,160.00,0.25,0.40,0.60,1.00),(3,10,18,1.20,2.00,3.00,5.00,8.00,12.00,20.00,30.00,50.00,80.00,120.00,200.00,0.30,0.50,0.80,1.20),(4,18,30,1.60,2.50,4.00,6.00,10.00,16.00,25.00,40.00,60.00,100.00,160.00,250.00,0.40,0.60,1.00,1.60),(5,30,50,2.00,3.00,5.00,8.00,12.00,20.00,30.00,50.00,80.00,120.00,200.00,300.00,0.50,0.80,1.20,2.00),(6,50,120,2.50,4.00,6.00,10.00,16.00,25.00,40.00,60.00,100.00,160.00,250.00,400.00,0.60,1.00,1.60,2.50),(7,120,250,3.00,5.00,8.00,12.00,20.00,30.00,50.00,80.00,120.00,200.00,300.00,500.00,0.80,1.20,2.00,3.00),(8,250,400,4.00,6.00,10.00,16.00,25.00,40.00,60.00,100.00,160.00,250.00,400.00,600.00,1.00,1.60,2.50,4.00),(9,400,630,5.00,8.00,12.00,20.00,30.00,50.00,80.00,120.00,200.00,300.00,500.00,800.00,1.20,2.00,3.00,5.00),(10,630,1000,6.00,10.00,16.00,25.00,40.00,60.00,100.00,160.00,250.00,400.00,600.00,1000.00,1.60,2.50,4.00,6.00),(11,1000,1600,8.00,12.00,20.00,30.00,50.00,80.00,120.00,200.00,300.00,500.00,800.00,1200.00,2.00,3.00,5.00,8.00),(12,1600,2500,10.00,16.00,25.00,40.00,60.00,100.00,160.00,250.00,400.00,600.00,1000.00,1600.00,2.50,4.00,6.00,10.00);
+/*!40000 ALTER TABLE `table4` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `table5`
+--
+
+DROP TABLE IF EXISTS `table5`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `table5` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `beg` int NOT NULL,
+  `en` int NOT NULL,
+  `accuracy1` decimal(6,2) NOT NULL,
+  `accuracy2` decimal(6,2) NOT NULL,
+  `accuracy3` decimal(6,2) NOT NULL,
+  `accuracy4` decimal(6,2) NOT NULL,
+  `accuracy5` decimal(6,2) NOT NULL,
+  `accuracy6` decimal(6,2) NOT NULL,
+  `accuracy7` decimal(6,2) NOT NULL,
+  `accuracy8` decimal(6,2) NOT NULL,
+  `accuracy9` decimal(6,2) NOT NULL,
+  `accuracy10` decimal(6,2) NOT NULL,
+  `accuracy11` decimal(6,2) NOT NULL,
+  `accuracy12` decimal(6,2) NOT NULL,
+  `accuracy13` decimal(6,2) NOT NULL,
+  `accuracy14` decimal(6,2) NOT NULL,
+  `accuracy15` decimal(6,2) NOT NULL,
+  `accuracy16` decimal(6,2) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `table5`
+--
+
+LOCK TABLES `table5` WRITE;
+/*!40000 ALTER TABLE `table5` DISABLE KEYS */;
+INSERT INTO `table5` VALUES (1,0,3,0.40,0.60,1.00,1.60,2.50,4.00,6.00,10.00,16.00,25.00,40.00,60.00,0.10,0.16,0.25,0.40),(2,3,10,0.50,0.80,1.20,2.00,3.00,5.00,8.00,12.00,20.00,30.00,50.00,80.00,0.12,0.20,0.30,0.50),(3,10,18,0.60,1.00,1.60,2.50,4.00,6.00,10.00,16.00,25.00,40.00,60.00,100.00,0.16,0.25,0.40,0.60),(4,18,30,0.80,1.20,2.00,3.00,5.00,8.00,12.00,20.00,30.00,50.00,80.00,120.00,0.20,0.30,0.50,0.80),(5,30,50,1.00,1.60,2.50,4.00,6.00,10.00,16.00,25.00,40.00,60.00,100.00,160.00,0.25,0.40,0.60,1.00),(6,50,120,1.20,2.00,3.00,5.00,8.00,12.00,20.00,30.00,50.00,80.00,120.00,200.00,0.30,0.50,0.80,1.20),(7,120,250,1.60,2.50,4.00,6.00,10.00,16.00,25.00,40.00,60.00,100.00,160.00,250.00,0.40,0.60,1.00,1.60),(8,250,400,2.00,3.00,5.00,8.00,12.00,20.00,30.00,50.00,80.00,120.00,200.00,300.00,0.50,0.80,1.20,2.00),(9,400,630,2.50,4.00,6.00,10.00,16.00,25.00,40.00,60.00,100.00,160.00,250.00,400.00,0.60,1.00,1.60,2.50),(10,630,1000,3.00,5.00,8.00,12.00,20.00,30.00,50.00,80.00,120.00,200.00,300.00,500.00,0.80,1.20,2.00,3.00),(11,1000,1600,4.00,6.00,10.00,16.00,25.00,40.00,60.00,100.00,160.00,250.00,400.00,600.00,1.00,1.60,2.50,4.00),(12,1600,2500,5.00,8.00,12.00,20.00,30.00,50.00,80.00,120.00,200.00,300.00,500.00,800.00,1.20,2.00,3.00,5.00);
+/*!40000 ALTER TABLE `table5` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2020-10-18 21:45:15
