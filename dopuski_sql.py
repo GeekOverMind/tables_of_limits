@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.config['dbconfig'] = {'host': 'localhost',
                           'user': 'user_pc',
                           'password': '1235',
-                          'database': 'table_of_limit'
+                          'database': 'tables_of_limits'
                           }
 
 

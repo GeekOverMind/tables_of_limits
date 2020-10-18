@@ -3,7 +3,7 @@ import sys
 
 import pandas as pd
 
-file = 'T2.xlsx'
+file = 'gost_24643.xlsx'
 tables_dopusk = {
     'table1': ('Допуск прямолинейности',
                'Допуск плоскостности'),

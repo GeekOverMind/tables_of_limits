@@ -83,7 +83,7 @@ def search_dopusk():
     dopusk_print = ''
     interval_razmerov = ''
 
-    file = 'T2.xlsx'
+    file = 'gost_24643.xlsx'
     tables_dopusk = {
         'table1': ('Допуск прямолинейности',
                    'Допуск плоскостности'),
