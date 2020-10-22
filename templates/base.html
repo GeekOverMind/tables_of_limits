@@ -6,8 +6,49 @@
         <link type="text/css" rel="stylesheet" href="static/index.css"/>
     </head>
     <body>
-        {% block body %}
+        <header><h1>{{ title }}</h1></header>
 
-        {% endblock %}
+        {% if title == 'Допуски формы и расположения' %}
+            <section id="description">
+                <p>
+                    Данный проект был создан для помощи в расчете допусков формы и расположений
+                </p>
+            </section>
+        {% endif %}
+
+        <div class="tableContainer">
+            <div class="tableRow">
+                <nav>
+                    Исходные коды данного проекта на GitHub:
+                    <ul>
+                        <li><a href="link1">console version</a></li>
+                        <li><a href="link2">pandas version</a></li>
+                        <li><a href="link3">sql version</a></li>
+                    </ul>
+                </nav>
+
+            {% block body %}
+
+            {% endblock %}
+
+            <aside>
+                <form>
+                Оставить комментарий<br>
+                Ваше имя: <input type="text" name="name" required><br>
+                Текст комментария: <textarea name="comment" required></textarea><br>
+                <input type="submit" value="Отправить">
+                </form>
+            </aside>
+            </div>
+        </div>
+
+        {% if title != 'Допуски формы и расположения' %}
+            <p>
+                <a href="{{ url_for('enter_page') }}">На главную</a>
+            </p>
+        {% endif %}
+
+        <footer>Тестовый вариант</footer>
+
     </body>
 </html>

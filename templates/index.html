@@ -1,49 +1,32 @@
 {% extends 'base.html' %}
 {% block body %}
-        <header><h1>{{ title }}</h1></header>
+    <section id="main">
+        {% if table %}
+            <table>
+                <tr>
+                    <th>Группа допусков</th>
+                    <th>Вид допуска</th>
+                    <th>Знак</th>
+                </tr>
 
-        <div class="tableContainer">
-            <div class="tableRow">
-                <section id="left">
-                    test
-                </section>
+                {% for k, v in table.items() %}
+                    {% for title_name in v %}
+                        <tr>
+                            {% if loop.first %}
+                                <td rowspan="{{ loop.length }}">{{ k }}</td>
+                            {% endif %}
 
-                <section id="main">
-                    {% if table %}
-                        <table>
-                            <tr>
-                                <th>Группа допусков</th>
-                                <th>Вид допуска</th>
-                                <th>Знак</th>
-                            </tr>
+                            <td>{{ title_name }}</td>
 
-                            {% for k, v in table.items() %}
-                                {% for title_name in v %}
-                                    <tr>
-                                        {% if loop.first %}
-                                            <td rowspan="{{ loop.length }}">{{ k }}</td>
-                                        {% endif %}
+                            <td><a href="{{ url_for('check_type', name=title_name, img=image[title_name])}}">
+                                <img src="static/images/main/{{image[title_name]}}" /></a></td>
+                        </tr>
+                    {% endfor %}
+                {% endfor %}
+            </table>
 
-                                        <td>{{ title_name }}</td>
-
-                                        <td><a href="{{ url_for('check_type', name=title_name, img=image[title_name])}}">
-                                            <img src="static/images/main/{{image[title_name]}}" /></a></td>
-                                    </tr>
-                                {% endfor %}
-                            {% endfor %}
-                        </table>
-
-                    {% else %}
-                        <h2>Извините, неполадки с таблицей</h2>
-                    {% endif %}
-                </section>
-
-                <section id="right">
-                    test
-                </section>
-            </div>
-        </div>
-
-        <footer>Тестовый вариант</footer>
-
+        {% else %}
+            <h2>Извините, неполадки с таблицей</h2>
+        {% endif %}
+    </section>
 {% endblock %}
