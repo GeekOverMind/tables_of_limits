@@ -11,7 +11,7 @@
         {% if title == 'Допуски формы и расположения' %}
             <section id="description">
                 <p>
-                    Данный проект был создан для помощи в расчете допусков формы и расположений
+                    Данный проект был создан для помощи в расчете допусков формы и расположения
                 </p>
             </section>
         {% endif %}
@@ -19,11 +19,11 @@
         <div class="tableContainer">
             <div class="tableRow">
                 <nav>
-                    Исходные коды данного проекта на GitHub:
+                    Исходный код проекта на GitHub:
                     <ul>
-                        <li><a href="link1">console version</a></li>
-                        <li><a href="link2">pandas version</a></li>
-                        <li><a href="link3">sql version</a></li>
+                        <li><a href="link1">> console version</a></li>
+                        <li><a href="link2">> pandas version</a></li>
+                        <li><a href="link3">> sql version</a></li>
                     </ul>
                 </nav>
 
@@ -32,11 +32,13 @@
             {% endblock %}
 
             <aside>
-                <form>
-                Оставить комментарий<br>
-                Ваше имя: <input type="text" name="name" required><br>
-                Текст комментария: <textarea name="comment" required></textarea><br>
-                <input type="submit" value="Отправить">
+                <form method='POST' action='/leave_comment'>
+                    Оставить комментарий к проекту<br>
+                    <br>
+                    Ваше имя: <input id="name" type="text" name="name" required><br>
+                    <br>
+                    Текст комментария: <textarea name="comment" placeholder="Введите текст комментария" required></textarea><br>
+                    <input type="submit" value="Отправить">
                 </form>
             </aside>
             </div>

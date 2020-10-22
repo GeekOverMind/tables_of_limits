@@ -34,7 +34,7 @@ def enter_page():
                                                    'Допуск полного торцового биения',
                                                    'Допуск формы заданного профиля',
                                                    'Допуск формы заданной поверхности')
-            }
+        }
 
     image_name = {}
     count = 1
@@ -80,8 +80,6 @@ def search_dopusk():
     it = int(it)
 
     accuracy = int(request.form['accuracy'])
-    dopusk_print = ''
-    interval_razmerov = ''
 
     file = 'gost_24643.xlsx'
     tables_dopusk = {
@@ -102,7 +100,7 @@ def search_dopusk():
                    'Допуск пересечения осей',
                    'Допуск биения в заданном направлении'),  # Delete this later
         'table5': ('Радиусное выражение',)  # Rename this
-                    }
+        }
 
     try:
         tablename = ''.join(k for k, v in tables_dopusk.items() if title_name in v)
@@ -146,4 +144,4 @@ def search_dopusk():
 app.secret_key = 'YouWillNeverGuessMySecretKey3'
 
 if __name__ == '__main__':
-    app.run(host='192.168.0.9', port='80', debug=True)
+    app.run(host='192.168.0.2', port='80', debug=True)

@@ -5,11 +5,12 @@ from flask import Flask, render_template, request, session, redirect, url_for, m
 
 app = Flask(__name__)
 
-app.config['dbconfig'] = {'host': 'localhost',
-                          'user': 'user_pc',
-                          'password': '1235',
-                          'database': 'tables_of_limits'
-                          }
+app.config['dbconfig'] = {
+    'host': 'localhost',
+    'user': 'user_pc',
+    'password': '1235',
+    'database': 'tables_of_limits'
+    }
 
 
 class OpenDatabase:
@@ -61,7 +62,7 @@ def enter_page():
                                                    'Допуск полного торцового биения',
                                                    'Допуск формы заданного профиля',
                                                    'Допуск формы заданной поверхности')
-            }
+        }
 
     image_name = {}
     count = 1
@@ -132,7 +133,7 @@ def search_dopusk():
                    'Допуск пересечения осей',
                    'Допуск биения в заданном направлении'),  # Delete this later
         'table5': ('Радиусное выражение',)  # Rename this
-                    }
+        }
 
     tablename = ''.join(k for k, v in tables_dopusk.items() if title_name in v)
     if not tablename:
@@ -140,10 +141,11 @@ def search_dopusk():
 
     try:
         with OpenDatabase(app.config['dbconfig']) as cursor:
-            _SQL = f"""SELECT beg, en, {'accuracy' + str(it - accuracy)}
-                       FROM {tablename}
-                       WHERE beg < {int(size)} AND en >= {int(size)};
-                       """
+            _SQL = f"""
+                SELECT beg, en, {'accuracy' + str(it - accuracy)}
+                FROM {tablename}
+                WHERE beg < {int(size)} AND en >= {int(size)};
+                """
             cursor.execute(_SQL)
             result = cursor.fetchone()
             interval_razmerov = f'От {str(result[0])} до {str(result[1])}'
@@ -170,4 +172,4 @@ def search_dopusk():
 app.secret_key = 'YouWillNeverGuessMySecretKey3'
 
 if __name__ == '__main__':
-    app.run(host='192.168.0.9', port='80', debug=True)
+    app.run(host='192.168.0.2', port='80', debug=True)
