@@ -1,11 +1,8 @@
 body {
-    background: #e9eef1 linear-gradient(#e9eef1, #c5d3dc);
+    background: #e9eef1;
     font-family: Arial, Verdana, sans-serif;
     text-align: center;
     margin: 0px;
-    /* background-color: #a5cad2;d1e4e8;cee1e7*e9eef1   url("images/main/background.jpg") no-repeat center center;
-    background: #e9eef1 linear-gradient(#e9eef1, #aad4ee);
-    a9c5d6*/
 }
 
 .tableContainer {
@@ -18,11 +15,17 @@ body {
     display: table-row;
 }
 
-section#left {
+nav {
     display: table-cell;
     vertical-align: top;
     width: 20%;
     padding: 15px;
+    text-align: left;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0px;
 }
 
 section#main {
@@ -32,15 +35,23 @@ section#main {
     width: 60%;
 }
 
-section#right {
+aside {
     display: table-cell;
     vertical-align: top;
     padding: 15px;
     width: 20%;
+    text-align: left;
+}
+
+input#name {
+    width: 67%;
+}
+
+aside textarea {
+    width: 100%;
 }
 
 table {
-    /*background-color: #e9eef1;*/
     border: solid black;
     border-collapse: collapse;
     width: 100%;
@@ -52,7 +63,6 @@ td, th {
 }
 
 .dopusk {
-    /*background-color: #e9eef1;*/
     width: 64%;
     margin-left: 18%;
     margin-rught: 18%;
@@ -86,8 +96,8 @@ td, th {
 }
 
 .toResult {
-    background: linear-gradient(white, grey);
-    border: none;
+    background-color: white;
+    border: thin solid black;
     color: black;
     width: 145px;
     padding: 5px 20px;
@@ -102,12 +112,11 @@ header, h1, h2 {
 }
 
 footer {
-
     padding-top: 10px;
 }
 
 a:link {
-  color: black;
+  color: orange;
   text-decoration: none;
 }
 
