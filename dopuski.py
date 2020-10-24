@@ -98,7 +98,7 @@ def search_dopusk():
                    'Допуск соосности',
                    'Допуск симметричности',
                    'Допуск пересечения осей',
-                   'Допуск биения в заданном направлении'),  # Delete this later
+                   'Допуск биения в заданном направлении'),
         'table5': ('Радиусное выражение',)  # Rename this
         }
 
@@ -118,9 +118,8 @@ def search_dopusk():
                     elif it == 1 and accuracy >= 1:
                         accuracy = 0
 
-                    dopusk = data_frame.iloc[count][it - accuracy]  # Значение либо int64, либо float64
+                    dopusk = data_frame.iloc[count][it - accuracy]  # int64 or float64
                     nuli = len(str(dopusk / 1000)) - 2
-                    interval_razmerov = interval
                     if it <= 12:
                         dopusk_print = f'{dopusk} мкм ({dopusk / 1000:0.{nuli}f} мм)'
                     else:
@@ -133,12 +132,26 @@ def search_dopusk():
                                    it=it,
                                    accuracy=it - accuracy,
                                    dopusk=dopusk_print,
-                                   interval_razmerov=interval_razmerov,
+                                   interval_razmerov=interval,
                                    image=image_name)
     except FileNotFoundError:
         return make_response('<h2>Таблицы допусков не найдены</h2>')
+    except AttributeError:
+        return make_response('<h2>Введеный размер отсутствует в таблице</h2>')
     except Exception:
         return make_response('<h2>Что-то пошло не так...</h2>')
+
+
+@app.route('/comment', methods=['POST'])
+def leave_comment():
+    the_author = request.form['author']
+    the_comment = request.form['comment']
+    try:
+        with open('comments.txt', 'a') as txt_file:
+            print(f'{the_author}: {the_comment}', file=txt_file)
+            return make_response('<h2>Комментарий отправлен</h2><br><a href="/">На главную</a>')
+    except Exception:
+        return make_response('<h2>Комментарий не отправлен</h2><br><a href="/">На главную</a>')
 
 
 app.secret_key = 'YouWillNeverGuessMySecretKey3'

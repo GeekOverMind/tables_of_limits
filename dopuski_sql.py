@@ -131,7 +131,7 @@ def search_dopusk():
                    'Допуск соосности',
                    'Допуск симметричности',
                    'Допуск пересечения осей',
-                   'Допуск биения в заданном направлении'),  # Delete this later
+                   'Допуск биения в заданном направлении'),
         'table5': ('Радиусное выражение',)  # Rename this
         }
 
@@ -167,6 +167,18 @@ def search_dopusk():
                                image=image_name)
     except Exception:
         return make_response('<h2>Что-то пошло не так...</h2>')
+
+
+@app.route('/comment', methods=['POST'])
+def leave_comment():
+    the_author = request.form['author']
+    the_comment = request.form['comment']
+    try:
+        with open('comments.txt', 'a') as txt_file:
+            print(f'{the_author}: {the_comment}', file=txt_file)
+            return make_response('<h2>Комментарий отправлен</h2><br><a href="/">На главную</a>')
+    except Exception:
+        return make_response('<h2>Комментарий не отправлен</h2><br><a href="/">На главную</a>')
 
 
 app.secret_key = 'YouWillNeverGuessMySecretKey3'

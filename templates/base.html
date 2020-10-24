@@ -19,7 +19,9 @@
         <div class="tableContainer">
             <div class="tableRow">
                 <nav>
-                    Исходный код проекта на GitHub:
+                    <p>
+                        Исходный код проекта на <a href="">GitHub:</a>
+                    </p>
                     <ul>
                         <li><a href="link1">> console version</a></li>
                         <li><a href="link2">> pandas version</a></li>
@@ -32,10 +34,10 @@
             {% endblock %}
 
             <aside>
-                <form method='POST' action='/leave_comment'>
-                    Оставить комментарий к проекту<br>
+                <form method='POST' action='/comment'>
+                    <p>Оставить комментарий к проекту</p>
                     <br>
-                    Ваше имя: <input id="name" type="text" name="name" required><br>
+                    Ваше имя: <input id="name" type="text" name="author" required><br>
                     <br>
                     Текст комментария: <textarea name="comment" placeholder="Введите текст комментария" required></textarea><br>
                     <input type="submit" value="Отправить">
@@ -50,7 +52,7 @@
             </p>
         {% endif %}
 
-        <footer>Тестовый вариант</footer>
+        <footer>Тестовый вариант расчетной программы</footer>
 
     </body>
 </html>
