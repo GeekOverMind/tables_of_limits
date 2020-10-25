@@ -124,3 +124,7 @@ a:visited {
   color: orange;
   text-decoration: none;
 }
+
+#results {
+    font-weight: bold;
+}

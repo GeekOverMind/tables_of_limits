@@ -11,7 +11,9 @@
         {% if title == 'Допуски формы и расположения' %}
             <section id="description">
                 <p>
-                    Данный проект был создан для помощи в расчете допусков формы и расположения
+                    Описание:<br>
+                    Проект создан для упрощения расчета допусков формы и расположения.<br>
+                    Для перехода к расчету нажмите на графический знак допуска
                 </p>
             </section>
         {% endif %}
@@ -35,12 +37,18 @@
 
             <aside>
                 <form method='POST' action='/comment'>
-                    <p>Оставить комментарий к проекту</p>
-                    <br>
-                    Ваше имя: <input id="name" type="text" name="author" required><br>
-                    <br>
-                    Текст комментария: <textarea name="comment" placeholder="Введите текст комментария" required></textarea><br>
-                    <input type="submit" value="Отправить">
+                    <p>
+                        Оставить комментарий к проекту
+                    </p>
+                    <p>
+                        Ваше имя: <input id="name" type="text" name="author" required>
+                    </p>
+                    <p>
+                        Текст комментария: <textarea name="comment" placeholder="Введите текст комментария" required></textarea>
+                    </p>
+                    <p>
+                        <input type="submit" value="Отправить">
+                    </p>
                 </form>
             </aside>
             </div>
@@ -52,7 +60,10 @@
             </p>
         {% endif %}
 
-        <footer>Тестовый вариант расчетной программы</footer>
+        <footer>
+            Тестовый вариант расчетной программы<br>
+            &copy; 2020
+        </footer>
 
     </body>
 </html>

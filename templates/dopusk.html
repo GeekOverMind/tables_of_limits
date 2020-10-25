@@ -22,7 +22,7 @@
                     </div>
 
                     <div class="tableRowForm">
-                        <p>Квалитет (IT) размера X от 1 до 16:</p>
+                        <p>Квалитет (от 1 до 16) размера X:</p>
                         <p><input type="text" name="it" width="30" required></p>
                     </div>
 
@@ -42,7 +42,9 @@
                 </form>
 
                 {% if size and it and dopusk and interval_razmerov and accuracy: %}
+                <span id="results">
                     Результаты:
+                </span>
                 <div class="tableContainerForm">
                     <div class="tableRowForm">
                         <p>Интервал размеров:</p>
