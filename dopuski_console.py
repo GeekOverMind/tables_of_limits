@@ -92,7 +92,7 @@ def search_dopusk():
                     dopusk = data_frame.iloc[count][it - accuracy]
                     nuli = len(str(dopusk / 1000)) - 2
                     print(f'Интервал размеров: {interval} мм')
-                    if it <= 12:
+                    if it - accuracy <= 12:
                         print(f'Значение допуска '
                               f'{print_name[dopusk_type][7:]}: {dopusk} мкм ({dopusk / 1000:0.{nuli}f} мм)')
                     else:

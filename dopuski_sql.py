@@ -152,7 +152,7 @@ def search_dopusk():
             dopusk = float(result[2])
             nuli = len(str(dopusk / 1000)) - 2
 
-            if it <= 12:
+            if it - accuracy <= 12:
                 dopusk_print = f'{dopusk} мкм ({dopusk / 1000:0.{nuli}f} мм)'
             else:
                 dopusk_print = f'{int(dopusk * 1000)} мкм ({dopusk:1.{nuli - 3}f} мм)'
