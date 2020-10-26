@@ -137,7 +137,7 @@ def search_dopusk():
     except FileNotFoundError:
         return make_response('<h2>Таблицы допусков не найдены</h2>')
     except AttributeError:
-        return make_response('<h2>Введеный размер отсутствует в таблице</h2>')
+        return make_response('<h2>Введенный размер отсутствует в таблице</h2>')
     except Exception:
         return make_response('<h2>Что-то пошло не так...</h2>')
 

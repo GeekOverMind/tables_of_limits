@@ -104,7 +104,7 @@ def search_dopusk():
     except FileNotFoundError:
         print('Таблицы допусков не найдены')
     except AttributeError:
-        return print('Введеный размер отсутствует в таблице')
+        return print('Введенный размер отсутствует в таблице')
     except Exception:
         print('В данной таблице отсутствует запрашиваемый размер')
     question()
