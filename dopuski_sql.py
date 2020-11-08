@@ -1,4 +1,5 @@
 import re
+import traceback
 
 import mysql.connector
 from flask import Flask, render_template, request, session, redirect, url_for, make_response
@@ -32,7 +33,9 @@ class OpenDatabase:
         self.conn.close()
 
         if exc_type is mysql.connector.errors.ProgrammingError:
-            raise exc_type(exc_value)
+            with open('log_error.txt', 'a') as txt_file:
+                print(f'{exc_type}: {exc_value}', file=txt_file)
+            return make_response('<h2>Неполадки с базой данных</h2>')
 
 
 @app.errorhandler(404)
@@ -166,6 +169,9 @@ def search_dopusk():
                                interval_razmerov=interval_razmerov,
                                image=image_name)
     except Exception:
+        err = traceback.format_exc()
+        with open('log_error.txt', 'a') as txt_file:
+            print(f'{err}', file=txt_file)
         return make_response('<h2>Что-то пошло не так...</h2>')
 
 
@@ -178,6 +184,9 @@ def leave_comment():
             print(f'{the_author}: {the_comment}', file=txt_file)
             return make_response('<h2>Комментарий отправлен</h2><br><a href="/">На главную</a>')
     except Exception:
+        err = traceback.format_exc()
+        with open('log_error.txt', 'a') as txt_file:
+            print(f'{err}', file=txt_file)
         return make_response('<h2>Комментарий не отправлен</h2><br><a href="/">На главную</a>')
 
 

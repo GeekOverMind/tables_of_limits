@@ -106,6 +106,10 @@ def search_dopusk():
     except AttributeError:
         return print('Введенный размер отсутствует в таблице')
     except Exception:
+        exc_type, exc_value = sys.exc_info()
+        if exc_type:
+            with open('log_error.txt', 'a') as txt_file:
+                print(f'{exc_type}: {exc_value}', file=txt_file)
         print('В данной таблице отсутствует запрашиваемый размер')
     question()
 

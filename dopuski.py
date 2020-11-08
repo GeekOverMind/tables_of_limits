@@ -1,4 +1,5 @@
 import re
+import traceback
 
 import pandas as pd
 from flask import Flask, render_template, request, session, redirect, url_for, make_response
@@ -139,6 +140,9 @@ def search_dopusk():
     except AttributeError:
         return make_response('<h2>Введенный размер отсутствует в таблице</h2>')
     except Exception:
+        err = traceback.format_exc()
+        with open('log_error.txt', 'a') as txt_file:
+            print(f'{err}', file=txt_file)
         return make_response('<h2>Что-то пошло не так...</h2>')
 
 
@@ -151,6 +155,9 @@ def leave_comment():
             print(f'{the_author}: {the_comment}', file=txt_file)
             return make_response('<h2>Комментарий отправлен</h2><br><a href="/">На главную</a>')
     except Exception:
+        err = traceback.format_exc()
+        with open('log_error.txt', 'a') as txt_file:
+            print(f'{err}', file=txt_file)
         return make_response('<h2>Комментарий не отправлен</h2><br><a href="/">На главную</a>')
 
 
